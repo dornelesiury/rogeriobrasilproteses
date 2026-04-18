@@ -7,14 +7,17 @@ html {
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Lora", serif;
 }
 
 body {
-    background-color: #f4f4f4; /* Branco fosco */
-    color: #333; /* Texto escuro para contraste */
+    background-color: #f4f4f4;
+    /* Branco fosco */
+    color: #333;
+    /* Texto escuro para contraste */
     font-size: 16px;
-    overflow-x: hidden; /* Permite scroll vertical, mas evita horizontal */
+    overflow-x: hidden;
+    /* Permite scroll vertical, mas evita horizontal */
 }
 
 header {
@@ -27,7 +30,8 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 3;
-    background: rgba(255, 255, 255, 0.8); /* Fundo do header semi-transparente claro */
+    background: rgba(255, 255, 255, 0.8);
+    /* Fundo do header semi-transparente claro */
     backdrop-filter: blur(10px);
 }
 
@@ -43,7 +47,7 @@ header {
 }
 
 .logo-text .name {
-    font-family: "Orbitron", sans-serif;
+    font-family: "Lora", serif;
     font-size: 2rem;
     font-weight: 900;
     color: #090c0c;
@@ -96,7 +100,8 @@ header nav ul li:hover::after {
 }
 
 .container {
-    height: 60vh; /* Reduz a altura para diminuir o espaço entre as seções */
+    height: 60vh;
+    /* Reduz a altura para diminuir o espaço entre as seções */
     position: relative;
     overflow: hidden;
 }
@@ -104,18 +109,20 @@ header nav ul li:hover::after {
 /* Remove a altura fixa de 60vh apenas na seção de contato */
 .contact-wrapper {
     height: 40vh;
-    overflow: visible; /* Garante que o texto não seja cortado no mobile */
+    overflow: visible;
+    /* Garante que o texto não seja cortado no mobile */
 }
 
 /* Seção de Banner Superior */
 .hero-banner {
     width: 100%;
-    height: 90vh; /* Ajuste a altura conforme sua preferência */
+    height: 90vh;
+    /* Ajuste a altura conforme sua preferência */
     position: relative;
     overflow: hidden;
 }
 
-.banner-content, 
+.banner-content,
 .hero-banner img {
     width: 100%;
     height: 100%;
@@ -124,13 +131,16 @@ header nav ul li:hover::after {
 }
 
 /* Ajuste para o scroll não ficar por baixo do header fixo */
-#servicos, #contato { /* Corrigido o ID de 'contactos' para 'contato' */
+#servicos,
+#contato {
+    /* Corrigido o ID de 'contactos' para 'contato' */
     scroll-margin-top: 90px;
 }
 
 /* Seção de Contactos Inferior */
 .contacts-section {
-    padding: 40px 10% 10px 10%; /* Reduzi o padding inferior de 40px para 10px */
+    padding: 40px 10% 10px 10%;
+    /* Reduzi o padding inferior de 40px para 10px */
     background-color: #f4f4f4;
     text-align: center;
 }
@@ -157,7 +167,7 @@ header nav ul li:hover::after {
 }
 
 .contacts-section h2 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Lora", serif;
     color: #000000;
     margin-bottom: 40px;
     font-size: 2.5rem;
@@ -217,19 +227,26 @@ header nav ul li:hover::after {
 }
 
 .content {
-    width: 55%; /* Define que a área de texto ocupa 55% da largura do contêiner */
-    padding-right: 50px; /* Adiciona um espaçamento interno à direita */
-    display: flex; /* Habilita o Flexbox para organizar o conteúdo */
-    align-items: flex-start; /* Alinha os textos e o botão à esquerda */
-    justify-content: center; /* Centraliza o bloco de conteúdo verticalmente */
-    z-index: 2; /* Garante que o texto fique acima dos círculos de fundo */
-    flex-direction: column; /* Empilha os elementos (título, texto, botão) um abaixo do outro */
+    width: 55%;
+    /* Define que a área de texto ocupa 55% da largura do contêiner */
+    padding-right: 50px;
+    /* Adiciona um espaçamento interno à direita */
+    display: flex;
+    /* Habilita o Flexbox para organizar o conteúdo */
+    align-items: flex-start;
+    /* Alinha os textos e o botão à esquerda */
+    justify-content: center;
+    /* Centraliza o bloco de conteúdo verticalmente */
+    z-index: 2;
+    /* Garante que o texto fique acima dos círculos de fundo */
+    flex-direction: column;
+    /* Empilha os elementos (título, texto, botão) um abaixo do outro */
 }
 
 /* Estilo do título principal (nome do serviço/produto) */
 .product-name {
     font-size: 4.5rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Lora", serif;
     line-height: 1.1;
     margin-bottom: 20px;
 
@@ -237,7 +254,8 @@ header nav ul li:hover::after {
     transform: translateX(400px);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
-    transition-delay: 0.5s; /* Espera a transição do slide principal começar */
+    transition-delay: 0.5s;
+    /* Espera a transição do slide principal começar */
 }
 
 /* Quando o item está ativo, o título volta para a posição original e aparece */
@@ -291,17 +309,15 @@ header nav ul li:hover::after {
 }
 
 .arrow-btn {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid #000000;
-}
-
-.arrow-btn:hover {
-    background-color: rgba(0, 247, 255, 0.2);
-    border-color: #00f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .indicators {
@@ -322,7 +338,7 @@ header nav ul li:hover::after {
 }
 
 .dot {
-    width: 40px;
+    width: 20px;
     height: 4px;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 2px;
@@ -341,44 +357,11 @@ header nav ul li:hover::after {
     overflow: hidden;
 }
 
-.circle {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 247, 255, 0.2);
-}
-
-.circle:nth-child(1) {
-    width: 200px;
-    height: 200px;
-    top: 10%;
-    left: 10%;
-}
-
-.circle:nth-child(2) {
-    width: 300px;
-    height: 300px;
-    top: 60%;
-    left: 80%;
-}
-
-.circle:nth-child(3) {
-    width: 150px;
-    height: 150px;
-    top: 70%;
-    left: 20%;
-}
-
-.circle:nth-child(4) {
-    width: 120px;
-    height: 120px;
-    top: 10%;
-    left: 65%;
-}
-
 .copyrights {
     text-align: center;
-    padding: 10px 0 2rem 0; /* Reduzi o padding superior de 2rem para 10px */
-} 
+    padding: 10px 0 2rem 0;
+    /* Reduzi o padding superior de 2rem para 10px */
+}
 
 /* Responsividade para Smartphones */
 @media screen and (max-width: 768px) {
