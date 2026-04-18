@@ -199,7 +199,7 @@ header nav ul li:hover::after {
 }
 
 .product-img {
-    width: 45%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -266,8 +266,8 @@ header nav ul li:hover::after {
 
 /* Estilo do parágrafo de descrição */
 .description {
-    font-size: 1.1rem;
-    color: #666;
+    font-size: 1.2rem;
+    color: #668;
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 600px;
