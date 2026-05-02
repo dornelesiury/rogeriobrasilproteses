@@ -370,6 +370,10 @@ header nav ul li:hover::after {
         padding: 15px 20px;
     }
 
+    .container {
+        height: 85vh;
+    }
+
     .logo {
         font-size: 1.5rem;
     }
@@ -417,7 +421,7 @@ header nav ul li:hover::after {
 
     .content {
         width: 100%;
-        padding: 20px;
+        padding: 20px 20px 60px 20px;
         align-items: center;
         text-align: center;
     }
@@ -442,5 +446,9 @@ header nav ul li:hover::after {
     .contacts-section h2 {
         font-size: 1.8rem;
         margin-bottom: 20px;
+    }
+
+    .indicators {
+        bottom: 20px;
     }
 }
