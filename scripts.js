@@ -56,6 +56,38 @@ nextButton.addEventListener('click', function () {
 const menuToggle = document.getElementById('menu-toggle');
 const navMenu = document.getElementById('nav-menu');
 
+const closeMenu = () => {
+    navMenu.classList.remove('active');
+    const icon = menuToggle.querySelector('i');
+    icon.classList.remove('fa-xmark');
+    icon.classList.add('fa-bars');
+};
+
+menuToggle.addEventListener('click', (event) => {
+    navMenu.classList.toggle('active');
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+    event.stopPropagation(); // Impede que o clique no botão se propague para o document e feche o menu imediatamente
+});
+
+// Fecha o menu ao clicar em qualquer link
+navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
+// Fecha o menu ao clicar fora dele
+document.addEventListener('click', (event) => {
+    // Se o menu estiver aberto e o clique não foi dentro do navMenu nem no menuToggle
+    if (navMenu.classList.contains('active') && !navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        closeMenu();
+    }
+});
+
+// Lógica do Menu Mobile
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
 menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     const icon = menuToggle.querySelector('i');
