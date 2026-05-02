@@ -99,6 +99,15 @@ header nav ul li:hover::after {
     width: 100%;
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+}
+
 .container {
     height: 60vh;
     /* Reduz a altura para diminuir o espaço entre as seções */
@@ -364,8 +373,29 @@ header nav ul li:hover::after {
         font-size: 1.5rem;
     }
 
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
     header nav ul {
-        gap: 15px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        gap: 30px;
+        z-index: 1000;
+    }
+
+    header nav ul.active {
+        right: 0;
     }
 
     .item {
