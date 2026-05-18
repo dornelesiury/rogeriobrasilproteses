@@ -40,17 +40,23 @@ function startAutoScroll() {
     }, 5000);
 }
 
-startAutoScroll();
+if (list) {
+    startAutoScroll();
+}
 
-prevButton.addEventListener('click', function () {
-    update(-1);
-    startAutoScroll(); // Reseta o timer ao interagir manualmente
-})
+if (prevButton) {
+    prevButton.addEventListener('click', function () {
+        update(-1);
+        startAutoScroll(); // Reseta o timer ao interagir manualmente
+    })
+}
 
-nextButton.addEventListener('click', function () {
-    update(1);
-    startAutoScroll(); // Reseta o timer ao interagir manualmente
-})
+if (nextButton) {
+    nextButton.addEventListener('click', function () {
+        update(1);
+        startAutoScroll(); // Reseta o timer ao interagir manualmente
+    })
+}
 
 // Lógica do Menu Mobile
 const menuToggle = document.getElementById('menu-toggle');

@@ -296,16 +296,73 @@ header nav ul li:hover::after {
 }
 
 .btn {
+    display: inline-block;
     padding: 12px 16px;
     background: #ffffff;
     border-radius: 30px;
-    /* border-color: 2px solid #000; */
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     border: 1px solid #000000;
+    text-decoration: none;
+    color: #000;
+    transition: background 0.3s ease;
 }
 
+.btn:hover {
+    background: #f0f0f0;
+}
+
+/* Estilos para a Página de Serviços Detalhada */
+.services-content {
+    padding: 150px 10% 80px;
+    background-color: #fff;
+}
+
+.service-detail {
+    margin-bottom: 100px;
+    scroll-margin-top: 120px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 60px;
+}
+
+.service-detail h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #090c0c;
+}
+
+.detail-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.detail-container img {
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.detail-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    .detail-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .detail-container img {
+        max-width: 100%;
+    }
+    .services-content {
+        padding-top: 120px;
+    }
+}
 
 .arrows {
     position: absolute;
