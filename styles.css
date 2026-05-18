@@ -118,7 +118,7 @@ header nav ul li:hover::after {
 
 /* Remove a altura fixa de 60vh apenas na seção de contato */
 .contact-wrapper {
-    height: 40vh;
+    height: auto;
     overflow: visible;
     /* Garante que o texto não seja cortado no mobile */
 }
@@ -146,6 +146,11 @@ header nav ul li:hover::after {
     /* Corrigido o ID de 'contactos' para 'contato' */
     scroll-margin-top: 90px;
 }
+
+#sobre {
+    scroll-margin-top: 90px; /* Garante que o header fixo não cubra a seção ao navegar */
+}
+
 
 /* Seção de Contactos Inferior */
 .contacts-section {
@@ -181,6 +186,31 @@ header nav ul li:hover::after {
     color: #000000;
     margin-bottom: 40px;
     font-size: 2.5rem;
+}
+
+.contact-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+}
+
+.contact-text, .contact-map {
+    flex: 1;
+}
+
+.contact-map iframe {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-flex {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .list {
@@ -350,6 +380,60 @@ header nav ul li:hover::after {
     color: #555;
 }
 
+/* Estilos para a Seção "Sobre Nós" */
+.about-section {
+    padding: 80px 10%;
+    background-color: #fcfcfc; /* Um fundo levemente diferente para destacar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Garante uma altura mínima para a seção */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Espaçamento entre a imagem e o texto */
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    width: 100%;
+}
+
+.about-image {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+}
+
+.about-text-content {
+    flex: 1.5; /* Ocupa 1.5 partes do espaço disponível, dando mais destaque ao texto */
+    text-align: left;
+}
+
+.about-text-content .section-title {
+    font-size: 2.8rem; /* Título um pouco maior */
+    color: #090c0c;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.about-text-content .section-title::after {
+    content: '';
+    display: block;
+    width: 60px; /* Linha decorativa abaixo do título */
+    height: 4px;
+    background-color: #000000;
+    margin-top: 10px;
+}
+
+
 @media screen and (max-width: 768px) {
     .detail-container {
         flex-direction: column;
@@ -503,6 +587,17 @@ header nav ul li:hover::after {
     .contacts-section h2 {
         font-size: 1.8rem;
         margin-bottom: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-text-content .section-title::after {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .indicators {
